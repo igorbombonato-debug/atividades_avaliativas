@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <button onclick="converterCelsiusParaFahrenheit()">
+        Celsius para Fahrenheit</button>
+        <button onclick="converterFahrenheitParaCelsius()">
+            Fahrenheit Para Celsius</button>
+            <div id="resultado"></div>
+
+            <script>
+                function converterCelsiusParaFahrenheit(){
+                let Celsius = parseFloat(prompt("Digite a temperatura em celsius: "));
+                let Fahrenheit = (Celsius * 9 / 5) + 32;
+                document.getElementById("resultado").innerHTML = `
+                ${Celsius} Celsius equivalem a ${Fahrenheit.toFixed(2)} Fahrenheit
+                `;
+                }
+
+                function converterFahrenheitParaCelsius(){
+                let Celsius = parseFloat(prompt("Digite a temperatura em fahrenheit: "));
+                let Fahrenheit = ( Fahrenheit - 32) * 5/9;
+                document.getElementById("resultado").innerHTML = `
+                ${Celsius}  Fahrenheit equivalem a ${celsius.toFixed(2)} Celsius
+                `;
+
+                }
+            </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checar Categoria de Habilitação</title>
+</head>
+<body>
+    <h1>Checar Categoria de Habilitação</h1>
+    <button onclick="checarCategoria()">Checar Categoria</button>
+    <div id="resultado"></div>
+
+    <script>
+        function checarCategoria(){
+            let categoria = prompt("Digite a categoria da habilitação").toUpperCase();
+            let nome = prompt("Digite seu nome:");
+
+            let tipoVeiculo = "";
+            switch(categoria) {
+                case "A":arguments
+                tipoVeiculo="motocicleta";
+                break;
+                case "B":arguments
+                tipoVeiculo="Automoveis, camionetas e veiculos de carga de até 3.500kg";
+                break;
+                case "C":arguments
+                tipoVeiculo="veiculos de carga acima de 3.500kg";
+                break;
+                case "D":arguments
+                tipoVeiculo="veiculos de transporte de passageiros com mais de 8  lugares";
+                break;
+                case "E":arguments
+                tipoVeiculo="veiculos com combinação de veiculos";
+                break;
+                default:
+                    tipoVeiculo = "Categoria inválida";
+                    break;
+            }
+
+            document.getElementById("resultado").innerHTML = `
+            ${nome},você pode dirigir ${tipoVeiculo}.
+            `;
+        }
+    </script>
+</body>
+</html>
